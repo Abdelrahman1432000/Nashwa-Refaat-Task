@@ -2,3 +2,30 @@
 MVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADAL
 TNAVAHVDDMPNALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVL
 TSKYR
+
+
+
+
+
+
+# تعريف جدول كتل الأحرف
+letter_masses = {'V': 1, 'A': 2, 'K': 3}
+
+# الكلمة اللي عايزين نحسب كتلتها
+word = "VAKA"
+
+# حساب الكتلة الإجمالية
+mass_vaka = sum(letter_masses[letter] for letter in word)
+
+# التحقق من صحة المعادلة
+is_equation_correct = mass_vaka == (
+    letter_masses['V'] +
+    letter_masses['A'] +
+    letter_masses['K'] +
+    letter_masses['A']
+)
+
+# طباعة النتائج
+print(f"كتلة الكلمة 'VAKA' هي: {mass_vaka}")
+print(f"هل المعادلة صحيحة؟ {'نعم' if is_equation_correct else 'لا'}")
+
